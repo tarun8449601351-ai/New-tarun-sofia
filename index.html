@@ -9,7 +9,62 @@
 
 <title>TARUN ADS RUN</title>
 
+<!-- ================================
+     META PIXEL
+================================ -->
+
+<script>
+!function(f,b,e,v,n,t,s)
+{
+    if(f.fbq)return;
+
+    n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+    };
+
+    if(!f._fbq)f._fbq=n;
+
+    n.push=n;
+    n.loaded=true;
+    n.version='2.0';
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=true;
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s);
+
+}
+(window, document, 'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+
+/* YOUR PIXEL ID */
+fbq('init', '2582929435488057');
+
+
+/* PAGE VIEW */
+fbq('track', 'PageView');
+
+</script>
+
+
+<noscript>
+<img
+height="1"
+width="1"
+style="display:none"
+src="https://www.facebook.com/tr?id=2582929435488057&ev=PageView&noscript=1"
+/>
+</noscript>
+
+
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -69,6 +124,7 @@ body::before{
     pointer-events:none;
 }
 
+
 /* TOP BADGE */
 
 .top-badge{
@@ -95,6 +151,7 @@ body::before{
         0 0 20px rgba(255,184,0,.08),
         inset 0 0 15px rgba(255,184,0,.04);
 }
+
 
 /* LOGO */
 
@@ -182,6 +239,7 @@ body::before{
     background:#111;
 }
 
+
 /* STATUS */
 
 .status{
@@ -238,6 +296,7 @@ body::before{
     }
 }
 
+
 /* TITLE */
 
 .title{
@@ -284,6 +343,7 @@ body::before{
         0 0 15px rgba(255,184,0,.25);
 }
 
+
 /* DIVIDER */
 
 .divider{
@@ -327,6 +387,7 @@ body::before{
         0 0 10px rgba(255,187,0,.5);
 }
 
+
 /* DESCRIPTION */
 
 .description{
@@ -341,9 +402,13 @@ body::before{
     line-height:1.8;
 }
 
-/* CTA BUTTON */
+
+/* CTA */
 
 .cta{
+    position:relative;
+    overflow:hidden;
+
     display:block;
 
     width:100%;
@@ -378,6 +443,42 @@ body::before{
         box-shadow .2s ease;
 }
 
+
+/* BUTTON SHINE */
+
+.cta::after{
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:-120%;
+
+    width:70%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.55),
+            transparent
+        );
+
+    transform:skewX(-20deg);
+
+    animation:shine 2.7s infinite;
+}
+
+@keyframes shine{
+    0%{
+        left:-120%;
+    }
+
+    45%,100%{
+        left:140%;
+    }
+}
+
 .cta:hover{
     transform:translateY(-2px);
 
@@ -389,6 +490,7 @@ body::before{
 .cta:active{
     transform:scale(.98);
 }
+
 
 /* FEATURES */
 
@@ -431,6 +533,7 @@ body::before{
 .feature span{
     color:#dca927;
 }
+
 
 /* STATS */
 
@@ -491,6 +594,7 @@ body::before{
     font-size:8px;
     letter-spacing:4px;
 }
+
 
 /* COUNTDOWN */
 
@@ -557,7 +661,8 @@ body::before{
     letter-spacing:4px;
 }
 
-/* BOTTOM STATUS */
+
+/* BOTTOM */
 
 .bottom-status{
     width:100%;
@@ -591,6 +696,7 @@ body::before{
     font-size:8px;
     letter-spacing:2px;
 }
+
 
 /* MOBILE */
 
@@ -634,6 +740,7 @@ body::before{
     }
 }
 
+
 /* DESKTOP */
 
 @media(min-width:700px){
@@ -647,20 +754,25 @@ body::before{
         padding-top:35px;
     }
 }
+
 </style>
 </head>
+
 
 <body>
 
 <div class="page">
 
+
     <!-- TOP BADGE -->
+
     <div class="top-badge">
         ✦ PREMIUM COMMUNITY ✦
     </div>
 
 
     <!-- LOGO -->
+
     <div class="logo-area">
 
         <div class="logo-ring"></div>
@@ -668,13 +780,14 @@ body::before{
         <img
             class="logo"
             src="https://d1yei2z3i6k35z.cloudfront.net/9021055/6aa4d833136676.20775670_5007.jpg"
-            alt="ANUJ- BHAI"
+            alt="ANUJ BHAI"
         >
 
     </div>
 
 
     <!-- STATUS -->
+
     <div class="status">
         <span class="status-dot"></span>
         LIVE COMMUNITY ACTIVE
@@ -682,8 +795,9 @@ body::before{
 
 
     <!-- TITLE -->
+
     <h1 class="title">
-        ANUJ~AEMY #1 
+        ANUJ~ARMY #1
     </h1>
 
     <div class="subtitle">
@@ -692,12 +806,14 @@ body::before{
 
 
     <!-- DIVIDER -->
+
     <div class="divider">
         <span class="diamond"></span>
     </div>
 
 
     <!-- DESCRIPTION -->
+
     <p class="description">
         Join our Telegram Group for daily updates,
         useful information and exclusive content.
@@ -705,6 +821,7 @@ body::before{
 
 
     <!-- TELEGRAM BUTTON -->
+
     <a
         href="https://t.me/+qeArAU8Y5oU4ZmZl"
         class="cta"
@@ -717,6 +834,7 @@ body::before{
 
 
     <!-- FEATURES -->
+
     <div class="features">
 
         <div class="feature">
@@ -739,6 +857,7 @@ body::before{
 
 
     <!-- STATS -->
+
     <div class="stats">
 
         <div class="stat">
@@ -765,13 +884,14 @@ body::before{
 
 
     <!-- COUNTDOWN -->
+
     <div class="count-title">
         AUTO REDIRECT IN
     </div>
 
     <div class="countdown">
 
-        <span id="seconds">6</span>
+        <span id="seconds">60</span>
 
         <span class="seconds-label">
             SECONDS
@@ -781,6 +901,7 @@ body::before{
 
 
     <!-- BOTTOM STATUS -->
+
     <div class="bottom-status">
         <b>●</b>
         &nbsp; Community Active — Join Now
@@ -805,43 +926,8 @@ const telegramLink =
 
 
 /* =================================
-   COUNTDOWN
-================================= */
-
-let time = 60;
-
-const seconds =
-    document.getElementById("seconds");
-
-
-const timer = setInterval(function(){
-
-    time--;
-
-    if(time <= 0){
-
-        time = 0;
-
-        seconds.textContent = time;
-
-        clearInterval(timer);
-
-        /*
-         * Automatic Telegram redirect
-         */
-        window.location.href = telegramLink;
-
-        return;
-    }
-
-    seconds.textContent = time;
-
-},1000);
-
-
-/* =================================
-   BUTTON
-================================= */
+   BUTTON PIXEL TRACKING
+================================ */
 
 const button =
     document.getElementById("joinBtn");
@@ -850,16 +936,20 @@ const button =
 button.addEventListener("click", function(){
 
     /*
-     * Telegram link is already in href.
-     * This event only sends a Meta Pixel event.
+     * LINK CLICK
      */
-
     if(typeof fbq === "function"){
 
-        fbq(
-            "leads",
-            "subscribe"
-        );
+        /* Standard Meta Lead event */
+        fbq('track', 'Lead');
+
+        /* Standard Meta Subscribe event */
+        fbq('track', 'Subscribe');
+
+        /*
+         * Extra custom event for clear identification
+         */
+        fbq('trackCustom', 'TelegramJoinClick');
 
     }
 
@@ -867,64 +957,43 @@ button.addEventListener("click", function(){
 
 
 /* =================================
-   META PIXEL
-================================= */
+   COUNTDOWN
+================================ */
 
-!function(f,b,e,v,n,t,s)
-{
-    if(f.fbq)return;
+let time = 60;
 
-    n=f.fbq=function(){
-        n.callMethod ?
-        n.callMethod.apply(n,arguments) :
-        n.queue.push(arguments)
-    };
-
-    if(!f._fbq)f._fbq=n;
-
-    n.push=n;
-    n.loaded=!0;
-    n.version='2.0';
-
-    n.queue=[];
-
-    t=b.createElement(e);
-    t.async=!0;
-
-    t.src=v;
-
-    s=b.getElementsByTagName(e)[0];
-
-    s.parentNode.insertBefore(t,s);
-
-}
-(window, document, 'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+const seconds =
+    document.getElementById("seconds");
 
 
-fbq(
-    'init',
-    '2582929435488057'
-);
+const timer =
+    setInterval(function(){
 
-fbq(
-    'track',
-    'PageView'
-);
+        time--;
+
+        if(time <= 0){
+
+            time = 0;
+
+            seconds.textContent = time;
+
+            clearInterval(timer);
+
+            /*
+             * Auto redirect
+             */
+            window.location.href =
+                telegramLink;
+
+            return;
+        }
+
+        seconds.textContent =
+            time;
+
+    },1000);
 
 </script>
-
-
-<noscript>
-
-    <img
-        height="1"
-        width="1"
-        style="display:none"
-        src="https://www.facebook.com/tr?id=2582929435488057&ev=PageView&noscript=1"
-    >
-
-</noscript>
 
 
 </body>
